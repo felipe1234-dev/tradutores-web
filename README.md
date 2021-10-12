@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+<h1 align="center">
+	<br />
+    <a href="http://www.amitmerchant.com/electron-markdownify">
+		<img 
+			src="./media/logo.png"
+			alt="Tradutores da Web" 
+			width="100" 
+		/>
+	</a>
+    <br />
+	Tradutores da Web
+	<br />
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center"> 
+	🚀 Em construção...  🚧
+</h4>
 
-## Available Scripts
+<h4 align="center">
+	Uma plataforma para aprendizado de idiomas, na qual você pode traduzir artigos e vídeos da internet.
+</h4>
 
-In the project directory, you can run:
+<p align="center">
+    <a href="https://web-translators.herokuapp.com/">
+		Website
+	</a> •
+    <a href="#sobre-o-projeto">
+		Sobre
+	</a> •
+	<a href="#inspirac-ao">
+		Inspiração
+	</a> •
+    <a href="#to-do-list">
+		To do List
+	</a> •
+    <a href="#tecnologias-usadas">
+		Tecnologias usadas
+	</a> •
+    <a href="#desafios">
+		Desafios
+	</a> •
+    <a href="#license">
+		License
+	</a>
+</p>
 
-### `npm start`
+![screenshot](./media/demo_landing.jpg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 💻 Sobre o projeto
 
-### `npm test`
+### Afinal, sobre o que é esse site? 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+É uma plataforma de **aprendizado de idiomas** projetada para os usuários postarem **vídeos** e **páginas na internet** *(com os devidos créditos)*, e **traduzirem** para um determinado idioma enquanto deixam **notas explicando suas traduções** para ajudarem outros estudantes.
 
-### `npm run build`
+Com sistema de pontos, níveis e quantidade de "obrigados", o usuário se sente mais motivado a engajar.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ❤️ Inspiração
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Lá pelos meus 12 anos, eu usava muito um site chamado [Duolingo](https://pt.duolingo.com/) - *o jeito grátis, divertido e eficaz de aprender um idioma* - e foi daí que eu aprendi o meu Inglês.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Eles tinham uma ferramenta - que era a *Imersão* - um lugar para **traduzir páginas da internet** para o idioma que estava aprendendo. 
 
-### `npm run eject`
+Era uma ferramenta muito boa pois provia um ambiente cooperativo e imersivo, além de atrair usuáios que só queriam ler sobre assuntos adversos.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Porém**, com o passar do tempo, ela foi **descontinuada**, e isso gerou um impacto para todos nós que usávamos a plataforma/ferramenta.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Não houve muitas tentativas de refazer a ferramenta** e as que fizeram, não foramm tão fiéis e/ou boas.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Agora sinto que posso recriar o site.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Pode ser que fique popular, não sei, mas farei por amor. ❤️
 
-## Learn More
+## 📝 To do List
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [x] Modo escuro
+- [ ] Modo claro
+- [ ] Cadastro de usuário
+- [x] Login de usuário
+- [ ] Página de perfil do usuário
+- [x] Feed com filtros
+- [x] Upload de documentos (páginas da Web)
+- [ ] Upload de vídeos
+- [x] Extração de texto da página Web
+- [x] Separação do texto extraído por frases
+- [x] Modelagem do Banco de Dados
+- [ ] Publicar novas traduções
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ Tecnologias usadas
 
-### Code Splitting
+As seguintes ferramentas foram usadas na construção do projeto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### **Backend**
 
-### Analyzing the Bundle Size
+- **[Express](https://expressjs.com/)**
+- **[Node.js](https://nodejs.org/en/)**
+- **[Node SQLite3](https://github.com/mapbox/node-sqlite3)**
+- **[Cheerio](https://github.com/cheeriojs/cheerio)**
+- **[Axios](https://github.com/axios/axios)**
+- **[dotENV](https://github.com/motdotla/dotenv)**
+- **[Express Rate Limit](https://github.com/nfriedly/express-rate-limit)**
+- **[Express Session](http://expressjs.com/en/resources/middleware/session.html)**
+- **[Helmet](https://helmetjs.github.io/)**
+- **[Sentence Boundary Detection (SBD)](https://github.com/Tessmore/sbd)**
+- **[Simple Git](https://github.com/steveukx/git-js)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+> Veja o arquivo [package.json](./package.json)
 
-### Making a Progressive Web App
+### **Frontend**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **[React](https://pt-br.reactjs.org/)**
+- **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
+- **[Node SASS](https://github.com/sass/node-sass)**
+- **[React Suite](https://rsuitejs.com/)**
+- **[React Facebook Login](https://github.com/keppelen/react-facebook-login)**
+- **[React Google Login](https://github.com/anthonyjgrove/react-google-login)**
+- **[React Responsive](https://github.com/contra/react-responsive)**
+- **[Use on Screen](https://github.com/felipe1234-dev/use-on-screen)**
 
-### Advanced Configuration
+> Veja o arquivo [package.json](./client/package.json)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 💪 Desafios 
 
-### Deployment
+O maior desafio foi o **baixo orçamento**. Infelizmente, não posso gastar com hospedagem de site nem de banco de dados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+A solução que encontrei quanto à hospedagem de domínio foi o [Heroku](https://www.heroku.com) - só havia um problema - Heroku provia planos grátis bem limitados para bancos de dados.
 
-### `npm run build` fails to minify
+Mas aí vem o ***SQLite***!! SQLite é um sistema de banco de dados baseado em um sistema de arquivos, ou seja, o seu banco de dados fica embutido em um **único** arquivo na linguagem **C** que procura simular um banco de dados real, você pode até usar SQL sem problema nenhum. Por cima de tudo, *grátis*.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Mas os mais espertos perceberão uma coisa com a associação entre o Heroku e o SQLite, mas eu acredito ter resolvido esse problema**.
+
+### Mas o Heroku não é efêmero?
+
+Sim, o Heroku é **efêmero** - isto é, as alterações feitas ao seu sistema de arquivos é passageira - então, se eu tenho o arquivo A e um usuário faz uma alteração nele dinamicamente com uma linguagem de servidor,  depois de 1 dia, essa alteração não vai mais valer.
+
+**Então, como vamos ter um banco de dados baseado em arquivo único sendo que o Heroku zera tudo no fim do dia??**
+
+### Então, o que fazer?
+
+A verdade é que o que vale é *o que vai para o Github*, o Heroku só considera o que estiver escrito no seu repositório no Github.
+
+Bom, a pergunta agora é se podemos atualizar o arquivo do banco no Github sempre que alguma interação for feita com ele? E a resposta é *sim*.
+
