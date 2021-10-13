@@ -38,9 +38,6 @@
 	</a> •
     <a href="#desafios">
 		Desafios
-	</a> •
-    <a href="#license">
-		License
 	</a>
 </p>
 
