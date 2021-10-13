@@ -1,0 +1,9 @@
+@import "mixins";
+
+.flag-from {
+    @include flag("flag-from");
+
+    .flag-to {
+        @include flag("flag-to");
+    }
+}

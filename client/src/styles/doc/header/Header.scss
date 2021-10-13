@@ -1,0 +1,20 @@
+@import "../../global/functions";
+@import "variables"; 
+
+@each $theme in light, dark {
+    #root[data-theme="#{$theme}"] {
+        
+        .rs-container.top {
+            padding: 30px 20px;
+            background-color: map-deep-get($container, $theme, "default");
+ 
+            p {
+                color: map-deep-get($container, $theme, "secondary");
+                font-size: large;
+                font-weight: 600;
+                word-break: break-all;
+            }
+        }
+
+    }  
+}

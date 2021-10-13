@@ -1,0 +1,85 @@
+@import "../../global/functions";
+@import "variables";
+
+@each $theme in light, dark {
+    #root[data-theme="#{$theme}"] {
+        .rs-document-nav-content {
+            font-size: 1.2em;
+            word-break: break-all;
+
+            blockquote, dl, ol, ul, 
+            p, pre, table, img {
+                &:not(:last-child){
+                    margin-bottom: 1em;
+                }
+            }
+            
+            figure {
+                display: block;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 40px;
+                margin-inline-end: 40px;
+                margin-left: 2em;
+                margin-right: 2em;
+                text-align: center;
+
+                &:not(:last-child) {
+                    margin-bottom: 2em;
+                }
+
+                &:not(:first-child) {
+                    margin-top: 2em;
+                }
+
+                img {
+                    height: auto;
+                    max-width: 100%;
+                }
+
+                figcaption {
+                    font-style: italic;
+                    display: block;
+                }
+            }
+
+            p {
+                display: block;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+            }
+
+            .sentence {
+                &[progress="not-translated"] {
+                    color: #34c3ff;
+                }
+
+                &[progress="translated-by-you"] {
+                    color: #70B120;
+                }
+                
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline dotted;
+                    line-height: 18px;
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+
+    @each $state in $states {
+        .rs-tooltip[progress="#{$state}"] {
+            .rs-tooltip-arrow {
+                border-top-color: map-deep-get($doc-content, $state, "tooltip", "arrow") !important;
+            }
+
+            .rs-tooltip-inner {
+                color: map-deep-get($doc-content, $state, "tooltip", "text") !important;
+                background-color: map-deep-get($doc-content, $state, "tooltip", "background") !important;
+            }
+        }
+    }
+}

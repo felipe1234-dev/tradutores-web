@@ -1,0 +1,20 @@
+@mixin flag($type) {
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50%;
+
+    @if $type == "flag-from" {
+        position: relative;
+        z-index: 2;
+        width: 30px;
+        height: 30px;
+    } 
+    @else if $type == "flag-to" {
+        position: absolute;
+        z-index: 1;
+        width: 20px; 
+        height: 20px; 
+        top: 10px; 
+        right: -10px;
+    }
+}

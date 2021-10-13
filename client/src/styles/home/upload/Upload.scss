@@ -1,0 +1,32 @@
+div[component="upload-modal"] {
+    h4 {
+        text-align: center;
+    }
+
+    .upload-doc-btn {
+        font-weight: 600;
+        background-color: #70B120;
+
+        &:hover {
+            background-color: lighten(#70B120, 10%);
+        }
+    }
+
+    .iframe-container {
+        position: relative;
+        width: 100%;
+        height: 265px;
+        overflow: auto;
+
+        iframe {
+            position: relative;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    }
+}

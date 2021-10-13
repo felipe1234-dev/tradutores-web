@@ -1,0 +1,29 @@
+@import "../../global/functions";
+@import "variables";
+
+div[component="footer"] {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+
+    p {
+        font-size: 18px;
+        word-break: break-all;
+    }
+
+    .title {
+        text-align: left;
+    }
+
+    .length {
+        text-align: right;
+    }
+}
+
+@each $theme, $color in $footer {
+    #root[data-theme="#{$theme}"] div[component="footer"] {
+        background-color: map-deep-get($footer, $theme, "background");
+    }
+}

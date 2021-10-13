@@ -1,0 +1,16 @@
+@mixin media-queries($breakpoints) {
+    @each $size, $arr in $breakpoints {
+        
+        $breakpoint: map-get($arr, "breakpoint");
+        $style: map-get($arr, "style");
+        
+        @media screen and (#{$breakpoint}) {
+            
+            @each $attr, $prop in $style {
+                #{$attr}: #{$prop};
+            }
+            
+        }
+        
+    }
+}

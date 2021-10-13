@@ -1,0 +1,113 @@
+@import "../../global/functions";
+@import "variables";
+@import "mixins";
+
+.rs-panel-group .rs-panel+.rs-panel:before {
+    border-top: transparent !important;
+}
+
+.rs-panel[component="card"] {
+
+    .rs-panel-body {
+        padding: 0;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    .card {
+        max-width: 100%;
+        position: relative;
+
+        .card-content {
+            background-color: transparent;
+            padding: 1.5rem;
+
+            .card-header {
+                .card-from {
+                    font-size: 18px;
+                }
+
+                .card-attachment {
+                    float: right;
+                }
+            }
+
+            .card-title {
+                padding: 10px 0;
+            }
+
+            .card-info {
+                display: flex;
+                align-items: flex-start;
+                text-align: inherit;
+
+                .info-center {
+                    @include flex(auto, 1, 1);
+                    text-align: inherit;
+                    padding: 5px 20px 0px 5px;
+                }
+
+                .info-right {
+                    @include flex(auto, 0, 0);
+                    margin-left: 1rem;
+
+                    .tag {
+                        align-items: center;
+                        border-radius: 4px;
+                        display: inline-flex;
+                        font-size: .75rem;
+                        height: 2em;
+                        justify-content: center;
+                        line-height: 1.5;
+                        padding-left: .75em;
+                        padding-right: .75em;
+                        white-space: nowrap;
+                    }
+
+                    .rs-progress {
+                        width: 180px;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}
+
+@each $theme in light, dark {
+    #root[data-theme="#{$theme}"] {
+        .rs-panel[component="card"] {
+            .rs-panel-body {
+                background-color: #1a1d24;
+            }
+
+            .card {
+                color: #7B8994;
+
+                .card-content {
+                    .card-title {
+                        color: #ECF0F1;
+
+                        @each $tag, $color in $tag-colors {
+                            .rs-tag[title="#{$tag}"] {
+                                font-weight: $font-weight;
+                                background-color: $color;
+                            }
+                        }
+
+                    }
+
+                    .card-info .info-right .tag {
+                        background-color: #f5f5f5;
+                        color: #4a4a4a;    
+                    }
+
+                }
+
+            }
+
+        }
+    }
+}

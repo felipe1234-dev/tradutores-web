@@ -1,0 +1,46 @@
+@import "../../global/functions";
+@import "../../global/mixins";
+@import "variables";
+
+header[component="header"] {
+    @include media-queries($arr);
+    
+    margin: 0 0 30px 0;
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 2s;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+
+    form {
+        margin: 30px 0;
+        font-size: 18px;
+        font-weight: 600;
+
+        .rs-form-group {
+            margin-right: 10px;
+        }
+
+        .rs-picker-select {
+            margin-left: 10px;
+        }
+    }
+}
+
+@each $theme in light, dark {
+    #root[data-theme="#{$theme}"] {
+        header[component="header"]  {
+            background-color: map-deep-get($header, $theme, "default");
+
+            h1 {
+                color: map-deep-get($header, $theme, "primary");
+            }
+    
+            h3 {
+                color: map-deep-get($header, $theme, "secondary");
+            }            
+        }
+    }
+}

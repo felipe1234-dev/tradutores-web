@@ -1,0 +1,31 @@
+div[component="login-modal"] {
+    .rs-modal-header {
+        text-align: center;
+    }
+
+    .rs-modal-body {
+        max-height: 600px !important;
+    }
+
+    .rs-form {
+        .rs-input {
+            padding-left: 36px;
+        }
+
+        .rs-icon {
+            color: #F2F2F6;
+        }
+
+        .rs-icon-google {
+            background-color: #CB3837 !important;
+        }
+
+        .rs-icon-facebook {
+            background-color: #4267B2 !important;
+        }
+    }
+
+    button {
+        font-weight: bold;
+    }
+}

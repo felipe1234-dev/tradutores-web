@@ -1,0 +1,116 @@
+@import "../../global/functions";
+@import "variables";
+
+.rs-navbar.rs-navbar-default[component="topbar"] {
+    z-index: 10;
+
+    .navbar-brand {
+        padding: 18px 20px 18px 15px;
+        display: inline-block;
+        font-weight: 600;
+    }
+
+    .rs-divider.rs-divider-vertical {
+        color: #A5A9AC;
+        height: 30px;
+    }
+
+    .rs-avatar {
+        margin-right: 5px;
+    }
+
+    .rs-dropdown-menu {
+        width: 100%;
+    }
+
+    .rs-dropdown-toggle-caret {
+        position: relative;
+        top: 2px;
+        left: 0;
+    }
+
+    .rs-nav-item.rs-nav-btn .rs-nav-item-content {
+        padding: 10px 5px 0 0;
+
+        &:hover {
+            background-color: transparent;
+        }
+
+        button {
+            font-weight: 600;
+        }
+
+        .rs-btn-icon {
+            background-color: transparent;
+        }
+    }
+
+    .rs-dropdown .rs-dropdown-toggle {
+        padding: 13px 13px 0 13px;
+
+        &:hover {
+            background-color: transparent;
+        }
+
+        .rs-icon {
+            font-size: 23px;
+        }
+    }
+}
+
+@each $theme in light, dark {
+    #root[data-theme="#{$theme}"] {
+        .rs-navbar.rs-navbar-default[component="topbar"] {
+            background-color: map-deep-get($navbar, $theme, "default");
+
+            .navbar-brand {
+                @if $theme == light {
+                    color: map-deep-get($navbar, "#{$theme}", "text");
+                }
+            }
+
+            .rs-nav-item {
+                &:not(.rs-nav-item-active):not(.rs-nav-btn) .rs-nav-item-content {
+                    @if $theme == light {
+                        color: map-deep-get($navbar, $theme, "text");
+                    }
+
+                    &:hover {
+                        @if $theme==light {
+                            background-color: lighten(
+                                map-deep-get($navbar, $theme, "default"), 10%
+                            );
+                            color: lighten(
+                                map-deep-get($navbar, $theme, "text"), 25%
+                            );
+                        }
+
+                        .rs-icon {
+                            color: map-deep-get($navbar, $theme, "primary");
+                        }
+                    }    
+                }
+
+                &.rs-nav-btn {
+                    @each $type, $color in (signup: primary, login: secondary, upload: primary) {
+                        &.rs-#{$type}-btn button {
+                            background-color: map-deep-get($navbar, $theme, $color);
+
+                            &:hover {
+                                background-color: darken(
+                                    map-deep-get($navbar, $theme, $color), 10%
+                                );
+                            }
+                        }
+                    }
+
+                    .rs-btn-icon:hover {
+                        background-color: lighten(
+                            map-deep-get($navbar, $theme, "default"), 10%
+                        );
+                    }
+                }
+            }
+        }
+    } 
+}

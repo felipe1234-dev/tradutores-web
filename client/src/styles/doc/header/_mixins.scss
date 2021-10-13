@@ -1,0 +1,10 @@
+@mixin flex-box-1 {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-box-2 {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+}

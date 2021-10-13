@@ -1,0 +1,21 @@
+.rs-sidenav[component="filters"] {
+    margin-bottom: 10px;
+
+    .sidenav-header {
+        padding: 20px;
+        font-size: 16px;
+        background: #0085FF;
+        color: #fff;
+    }
+    
+    .rs-dropdown-item-panel {
+        padding: 15px 20px;
+        color: #aaa;
+    }
+
+    .rs-dropdown-item-content:hover {
+        cursor: default;
+        background-color: transparent !important;
+    }
+
+}

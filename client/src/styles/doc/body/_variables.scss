@@ -1,0 +1,40 @@
+$doc-nav: (
+    light: (
+        default  : #272c36,
+        primary  : #e5e5e5,
+        secondary: #7B8994
+    ),
+    dark: ( 
+        default  : #7B8994,
+        primary  : #7B8994,
+        secondary: #7B8994
+    ),
+    greyish: #3c3f43,
+    blueish: #34c3ff
+);
+
+$states: "not-translated", "not-checked", "translated-by-you";
+
+$doc-content: (
+    not-translated: (
+        tooltip: (
+            text: #e9ebf0,
+            background: #34c3ff,
+            arrow: #34c3ff
+        )
+    ),
+    not-checked: (
+        tooltip: (
+            text: #e9ebf0,
+            background: #292d33,
+            arrow: #292d33
+        )
+    ),
+    translated-by-you: (
+        tooltip: (
+            text: #e9ebf0,
+            background: #70B120,
+            arrow: #70B120
+        )
+    )
+);

@@ -1,0 +1,15 @@
+@function map-deep-get($map, $keys...) {
+    $aux: map-get(
+        $map, 
+        nth($keys, 1) 
+    );
+    
+    @for $i from 2 through length($keys) {
+        $aux: map-get(
+            $aux, 
+            nth($keys, $i) 
+        );
+    }
+    
+    @return $aux;
+}

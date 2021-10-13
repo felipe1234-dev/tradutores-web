@@ -1,0 +1,33 @@
+$header: (
+    light: (
+        default  : #ECF0F1,
+        primary  : #575757,
+        secondary: #7B8994
+    ),
+    dark : ( 
+        default  : #1A1D24,
+        primary  : #F9FAFC,
+        secondary: #7B8994
+    )
+);
+
+$arr: (
+    md: (
+        breakpoint: "min-width: 992px",
+        style: (
+            padding: 50px 50px 0 50px
+        ) 
+    ),
+    sm: ( 
+        breakpoint: "min-width: 480px",
+        style: (
+            padding: 50px 50px 0 50px
+        ) 
+    ),
+    xm: (
+        breakpoint: "max-width: 480px",
+        style: (
+            padding: 50px 30px 0 30px
+        )    
+    )
+);

@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$bg: (light: #F0F2F5, dark: #0F131A);
+
+@each $theme, $color in $bg {
+  #root[data-theme="#{$theme}"] {
+    background-color: $color !important;
+    height: 100vh;
+    width: 98.5vw;
+
+    .rs-grid-container-fluid {
+      padding: 0;
+    }
+  }
+}
+
