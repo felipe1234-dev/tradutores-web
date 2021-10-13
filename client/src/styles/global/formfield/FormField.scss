@@ -1,0 +1,20 @@
+div[component="formfield"] {
+    margin-bottom: 24px;
+
+    .rs-input-group {
+        overflow: visible !important; 
+    }
+
+    .rs-input-group-btn, .rs-input-group-addon {
+
+        &[placement="right"] {
+            left: inherit;
+            right: 1px;
+        }
+
+        &[placement="left"] {
+            left: 0;
+        }
+
+    }
+}
